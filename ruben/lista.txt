@@ -1,0 +1,176 @@
+5518	Grassi Lucía Karina	1
+23919	Scocozza Simon Nicolas	1
+44819	Ruiz Cortes Jeferson Osmeider	1
+41718	Estévez Santiago Tomás	2
+44713	Balboa Guillermo Raul	2
+18719	Canedo Emiliano	2
+20217	Abate Nicolás Bruno	3
+24717	Toro Julián Hernan	3
+36517	Chaves Jonatan Ignacio	3
+48319	De Vicenzo Nahuel Hernan	4
+5019	Akris Ramiro	4
+45819	Chab Kenaan Uriel	4
+41719	Segovia Diego Matías	5
+35919	Polverino Lorenzo	5
+26419	Ramos Pablo	5
+36819	Feldman Mateo Agustin	6
+55516	Gonzalez Pereira Maria Celeste	6
+5919	Fumagalli Teo	6
+30019	Rivarola Mariana Cecilia	7
+13919	Principe Acero Diana 	7
+37719	Pérez Del Cerro Catalina	7
+43635	Rijo Oswald Eduardo	8
+36619	Carnelutti Magurno Salvador	8
+21719	Meier Brian Jonathan	8
+64407	Garcia Ruben Dario	9
+44919	Valls Valentin Franco	9
+47119	Riveiro Martin Gabriel	9
+5719	Rodriguez Miguel	10
+16919	Itzcovitz Ryan	10
+Condicion	Mariano Pironio	10
+34619	Hermosilla Báez Agustín	11
+57619	Cantini Budden Sebastian	11
+25719	Seva Nicolás Leonel	11
+12319	Martin Batista Ignacio	12
+27219	Mañez Grondona Jesús Ignacio	12
+34419	Bongiovanni Franco Alessio	12
+50519	Rodríguez Calzada Braian Edgardo	13
+45719	Mendoza Lucas Emmanuel	13
+22519	Basualdo Camilo Alejandro	13
+6119	Wiszniewer Violeta	14
+32519	Burgos Pesqueira Maria Agustina	14
+48719	Ainchil Manuela	14
+22919	Cinquemani Maximiliano Emanuel	15
+14819	Bogliacino Felipe Alfredo	15
+67618	Bellazzi Franco	15
+10819	Salmun Daniel	16
+28419	Bulacio Granata Blas	16
+47419	Gilabert Juan Bautista	16
+14119	Tomasini Lucas Daniel	17
+10219	Almada Canosa Agustin Nicolas	17
+42719	Liendro Adolfo Benjamin	17
+22219	Zolezzi María Victoria	18
+13619	Herrero Francisco Jose	18
+42419	Miceli Juan Pablo	18
+32319	Oppenheim Abi Noam	19
+24519	Felder Andres	19
+46919	Grinspan Ian	19
+10719	Russo Guiot Gabriel Marcelo	20
+44419	Palladino Leonardo Victor	20
+22419	Martinez Abeldaño Facundo	20
+30019	Rivarola Mariana Cecilia	21
+79418	Yguaneti Docampo Renny Jesús	21
+12219	Coronel Christian Leonardo	21
+30419	Shimane Mariana Nicole	22
+15919	Villagra Tomas	22
+22119	Dorda Recalde Maria De Las Mercedes	22
+26319	Calla Martin Alejandro	23
+24819	Torsello Juan Manuel	23
+22914	Fantagossi Nicolás Ezequiel	23
+47519	Carabajal Gonzalo	24
+31019	Yazlle Maximo	24
+26119	Guzmán Cárdenas David Alejandro	24
+74118	Sarmiento Matías Federico	25
+10919	Pautasso Manuel	25
+9519	Rios Daniel Alberto	26
+82218	Pereira Cinthya Ayelen	26
+12919	Minino Suarez Eliana Mariel	26
+5118	Reinoso Julian	27
+20919	Borrelli Victoria	27
+35519	Loleo Saigos Belen	27
+6219	Bruno Patricio Damián	28
+32919	Ravaglia Santiago Matias	28
+5619	Bustos Gonzalo Martín	28
+80917	Aguilar Santiago	29
+55019	Gonzalez Bugtrup Facundo	29
+51719	Aranguren Venero Miguel Alejandro	29
+49119	Arranz Florek Yamila Iara	30
+57718	Gorosito Luciana	30
+51019	Gomez Nicolás Rubén	30
+7819	Páez María Belén	31
+41019	Silva Fernandez Ignacio Tomas	31
+3719	Suaiter Federico Hernán	31
+23019	Fabian Florencia	32
+56018	Puglisi Sebastian Ignacio	32
+26619	Maspi Gian Agustín	32
+13019	Tambussi Juan Bautista	33
+25919	Bobzin Lucía Victoria	33
+51619	Cristi Federico	33
+42224643	Pedro Alvarez Capdevila	34
+28219	Lavalle Cobo Ignacio	34
+14519	Volij Matias Ariel	34
+29919	Schiavinato Mauro Luis	35
+35117	Yulita Federico	35
+36119	Serna Joaquín Sebastián	35
+6619	Choclin Juana	36
+41419	Fiora Victoria María	36
+31419	Goria Julieta	36
+22619	Chanes Mauricio	37
+2919	Cámara Maximiliano Ariel	37
+23117	Greco Francisco	37
+19019	Zion Ezequiel Joaquín	38
+20319	Castro Russo Matias Nahuel	38
+5819	Saied Martin Yoel	38
+45119	Varani Victoria Antonella	39
+32719	Curti Tomas Agustin	39
+17219	Sovilj Marko Agustín	39
+12019	Cagnoni Speranza Sebastian Eduardo	40
+35719	Sobrino Ezequiel	40
+37419	Rodriguez Celma Guido	40
+15219	Juárez Guillén Sofía	41
+13919	Principe Acero Diana 	41
+37719	Pérez Del Cerro Catalina	41
+20119	Vicharra Sanchez Dylan Steven	42
+33419	Petre Federico Julián	42
+29119	López Marcelo Fabián	42
+34819	Demarco Franco Daniel	43
+44418	Aranda Daiana Ailen	43
+51319	Aramayo María Paola	43
+55319	Pardo Cristopher Jonas	44
+43319	Acha Francisco	44
+5319	Rodriguez Ruiz Santiago	44
+27019	Palacio Octavio	45
+49819	Muñiz Laureano	45
+35219	Parra Corti María Belén	45
+19319	Turco Dario Juan Nicolas	46
+8419	Tarsia Luciano Fabrizio	46
+48919	Duleba Mendoza Marcos Angel Alexander	46
+10119	Pérez Herrero Alejo Daniel	47
+9218	Galeano Juan Ignacio	47
+92328555	Carlos Zerda	47
+8319	Capelo Gianluca	48
+9019	Filgueira Julián Gabriel	48
+52918	Torres Dario Sebastian	48
+28719	Goy Agustin	49
+9119	Iturriza Ramirez Joaquín	49
+47719	Spisso Nicolás Ariel	49
+18319	Belgorodsky Martin Yoel	50
+9719	Dondo Ignacio	50
+56419	Perez Labra Jean Lucas	50
+43919	Coceres Ezequiel Oscar	51
+50219	Repollo Nicolas	51
+40519	Jaimes Leandro Julián	51
+46019	Pajor Ivo	52
+14619	Mischener Forte Uriel Ivan	52
+57119	Marino Zoe	52
+11319	Sujovolsky Tomás	53
+26519	Wappner Daniel	53
+11119	Ernst Erik	53
+40419	La Ruffa Franco	54
+55419	Ferraro Lucas Francisco	54
+4812	Van Der Velde Guido Gustavo	55
+9009	Ramirez Leandro Jesús	55
+52419	Lopetrone Gianfranco	55
+45919	Baril Tomas Adolfo	56
+46419	Kuktosky Fernandez Matheo Andres	56
+29319	Lerer Joaquín Matías	56
+94805	Alvis César	57
+82011	Mattes Francisco	57
+36919	Ilundayn Ivan Antiel	58
+62511	Desinano Nicolas	58
+52818	Klein Pablo Andrés	58
+23319	Bolaños Cecilia Micaela	59
+38219	Kunik Alejandro Yuri	59
+23119	Rodriguez Pardina Laura	60
+25819	Varela Santiago Daniel	60
+32119	García Micaela	60
