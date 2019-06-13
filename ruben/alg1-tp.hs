@@ -18,6 +18,11 @@ lista_publicaciones=[((5518,"Grassi Luca Karina"),"texto de prueba",[(23919,"Sco
 red_social :: RedSocial
 red_social = (lista_usuarios,lista_relaciones,lista_publicaciones)
 
+rs1 :: RedSocial
+rs1 =  ([(1,"j"),(2,"j"),(3,"as")],[((1,"j"),(2,"j")),((1,"j"),(3,"as"))],[])
+rs2 :: RedSocial
+rs2 =  ([(1,"j"),(2,"j"),(3,"as")],[((1,"j"),(2,"j"))],[])
+
 -- Funciones basicas
 
 usuarios :: RedSocial -> Set Usuario
@@ -45,7 +50,9 @@ likesDePublicacion (_, _, us) = us
 
 -- Dada una red social retorna un conjunto con los nombres de todos los usuarios.
 nombresDeUsuarios :: RedSocial -> Set String
-nombresDeUsuarios = undefined
+nombresDeUsuarios ([],_,_) = []
+nombresDeUsuarios (((id,nombre):us), rs, ps) = elimRepetidos (nombre : nombresDeUsuarios (us,rs,ps))
+
 
 -- Dada una red social y un usuario retorna el conjunto de amigos del mismo
 amigosDe :: RedSocial -> Usuario -> Set Usuario
@@ -82,3 +89,10 @@ tieneUnSeguidorFiel = undefined
 -- Dada una red social y dos usuarios, indica si existe una secuencia de usuarios relacionados para llegar del primero al segundo.
 existeSecuenciaDeAmigos :: RedSocial -> Usuario -> Usuario -> Bool
 existeSecuenciaDeAmigos = undefined
+
+-- Dada una lista de cierto tipo retorna un conjunto del mismo tipo
+elimRepetidos :: Eq a => [a] -> Set a
+elimRepetidos (a:as)
+ | as == [] = [a]
+ | (elem a as) = elimRepetidos as
+ | otherwise = a : (elimRepetidos as)
