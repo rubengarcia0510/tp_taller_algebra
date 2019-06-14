@@ -51,16 +51,31 @@ likesDePublicacion (_, _, us) = us
 -- Dada una red social retorna un conjunto con los nombres de todos los usuarios.
 nombresDeUsuarios :: RedSocial -> Set String
 nombresDeUsuarios ([],_,_) = []
-nombresDeUsuarios (((id,nombre):us), rs, ps) = elimRepetidos (nombre : nombresDeUsuarios (us,rs,ps))
+nombresDeUsuarios ((u:us), rs, ps) = elimRepetidos (nombreDeUsuario u : nombresDeUsuarios (us,rs,ps))
 
 
 -- Dada una red social y un usuario retorna el conjunto de amigos del mismo
 amigosDe :: RedSocial -> Usuario -> Set Usuario
-amigosDe = undefined
+amigosDe ([],_,_) user = []
+amigosDe ((u:us),rs,ps) user | u == user = relacionesDe rs user
+                             | otherwise = amigosDe (us,rs,ps) user
+
+--Busco las relaciones de 1 usuarios
+relacionesDe :: Set Relacion -> Usuario -> Set Usuario
+relacionesDe [] user = []
+relacionesDe ((user1,user2):rs) user | user == user1 = user2:relacionesDe rs user
+                                     | user == user2 = user1:relacionesDe rs user
+                                     | otherwise = relacionesDe rs user
 
 -- Dada una red social y un usuario retorna la cantidad de amigos de dicho usuario
 cantidadDeAmigos :: RedSocial -> Usuario -> Int
-cantidadDeAmigos = undefined
+cantidadDeAmigos ((u:us),rs,ps) user | u == user = cantidadRelaciones rs user
+
+cantidadRelaciones :: Set Relacion -> Usuario -> Int
+cantidadRelaciones [] user = 0
+cantidadRelaciones ((user1,user2):rs) user | user == user1 = 1 + cantidadRelaciones rs user
+                                           | user == user2 = 1 + cantidadRelaciones rs user
+                                           | otherwise = cantidadRelaciones rs user
 
 -- Dada una red social retorna el usuario con mas amigos. De existir más de uno devuelve cualquiera de ellos.
 usuarioConMasAmigos :: RedSocial -> Usuario
