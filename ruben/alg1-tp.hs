@@ -69,8 +69,8 @@ relacionesDe ((user1,user2):rs) user | user == user1 = user2:relacionesDe rs use
 
 -- Dada una red social y un usuario retorna la cantidad de amigos de dicho usuario
 cantidadDeAmigos :: RedSocial -> Usuario -> Int
-cantidadDeAmigos ([],_,_) user = 0
 cantidadDeAmigos ((u:us),rs,ps) user | u == user = cantidadRelaciones rs user
+                                     | otherwise = cantidadDeAmigos (us,rs,ps) user
 
 cantidadRelaciones :: Set Relacion -> Usuario -> Int
 cantidadRelaciones [] user = 0
@@ -80,7 +80,7 @@ cantidadRelaciones ((user1,user2):rs) user | user == user1 = 1 + cantidadRelacio
 
 -- Dada una red social retorna el usuario con mas amigos. De existir más de uno devuelve cualquiera de ellos.
 usuarioConMasAmigos :: RedSocial -> Usuario
-usuarioConMasAmigos ([],_,_) = undefined
+usuarioConMasAmigos ((u:[]),_,_) = u
 usuarioConMasAmigos ((u1:u2:us),rs,ps) | (cantidadDeAmigos ((u1:u2:us),rs,ps) u1) >= (cantidadDeAmigos ((u1:u2:us),rs,ps) u2) = usuarioConMasAmigos ((u1:us),rs,ps)
                                        | otherwise = usuarioConMasAmigos ((u2:us),rs,ps)
 
