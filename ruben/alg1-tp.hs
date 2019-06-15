@@ -91,7 +91,14 @@ estaRobertoCarlos red | ( cantidadDeAmigos red (usuarioConMasAmigos red) ) > 3 =
 
 -- Dada una red social y un usuario retorna el conjunto de publicaciones del mismo.
 publicacionesDe :: RedSocial -> Usuario -> Set Publicacion
-publicacionesDe = undefined
+publicacionesDe (_,[],_) user = []
+publicacionesDe ((u:us),rs,ps) user | u == user = pubDe ps user
+                                    | otherwise = publicacionesDe (us,rs,ps) user
+
+pubDe :: Set Publicacion -> Usuario -> Set Publicacion
+pubDe [] user = []
+pubDe ((us,texto,lista_users):ps) user | us == user = (us,texto,lista_users):pubDe ps user
+                                       | otherwise = pubDe ps user
 
 -- Dada una red social y un usuario retorna el conjunto de publicaciones a las que el usuario les dió like.
 publicacionesQueLeGustanA :: RedSocial -> Usuario -> Set Publicacion
