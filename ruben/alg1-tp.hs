@@ -114,7 +114,8 @@ matchPublicacionUsuario (publicador,post,(u:us)) user | u == user = True
 
 -- Dada una red social y dos usuarios indica si les gustan las mismas publicaciones
 lesGustanLasMismasPublicaciones :: RedSocial -> Usuario -> Usuario -> Bool
-lesGustanLasMismasPublicaciones = undefined
+lesGustanLasMismasPublicaciones rs us1 us2 | publicacionesQueLeGustanA rs us1 == publicacionesQueLeGustanA rs us2 = True
+                                           | otherwise = False
 
 -- Dada una red social y un usuario u, indica si existe un usuario que le puso like a todas las publicaciones de u.
 tieneUnSeguidorFiel :: RedSocial -> Usuario -> Bool
