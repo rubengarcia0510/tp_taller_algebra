@@ -43,6 +43,7 @@ nombreDeUsuario (_, nombre) = nombre
 usuarioDePublicacion :: Publicacion -> Usuario
 usuarioDePublicacion (u, _, _) = u
 
+
 likesDePublicacion :: Publicacion -> Set Usuario
 likesDePublicacion (_, _, us) = us
 
@@ -102,7 +103,14 @@ pubDe ((us,texto,lista_users):ps) user | us == user = (us,texto,lista_users):pub
 
 -- Dada una red social y un usuario retorna el conjunto de publicaciones a las que el usuario les dió like.
 publicacionesQueLeGustanA :: RedSocial -> Usuario -> Set Publicacion
-publicacionesQueLeGustanA = undefined
+publicacionesQueLeGustanA (us,rs,[]) user = []
+publicacionesQueLeGustanA (us,rs,(p:ps)) user | matchPublicacionUsuario p user = (p:publicacionesQueLeGustanA (us,rs,ps) user)
+                                           | otherwise = publicacionesQueLeGustanA (us,rs,ps) user
+
+matchPublicacionUsuario :: Publicacion -> Usuario -> Bool
+matchPublicacionUsuario (_,_,[]) user = False
+matchPublicacionUsuario (publicador,post,(u:us)) user | u == user = True
+                                          | otherwise = matchPublicacionUsuario (publicador,post,us) user
 
 -- Dada una red social y dos usuarios indica si les gustan las mismas publicaciones
 lesGustanLasMismasPublicaciones :: RedSocial -> Usuario -> Usuario -> Bool
