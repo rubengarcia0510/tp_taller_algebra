@@ -119,7 +119,14 @@ lesGustanLasMismasPublicaciones rs us1 us2 | publicacionesQueLeGustanA rs us1 ==
 
 -- Dada una red social y un usuario u, indica si existe un usuario que le puso like a todas las publicaciones de u.
 tieneUnSeguidorFiel :: RedSocial -> Usuario -> Bool
-tieneUnSeguidorFiel = undefined
+tieneUnSeguidorFiel ([],_,_) user = False
+tieneUnSeguidorFiel ((u:us),rs,ps) user | checkUsuarioPublicacion (publicacionesDe ((u:us),rs,ps) user) u == length (publicacionesDe ((u:us),rs,ps) user) =  True
+                                        | otherwise = tieneUnSeguidorFiel (us,rs,ps) user
+
+checkUsuarioPublicacion :: Set Publicacion -> Usuario -> Int
+checkUsuarioPublicacion [] user = 0
+checkUsuarioPublicacion (p:ps) user | matchPublicacionUsuario p user == True = 1 + checkUsuarioPublicacion ps user
+                                    | otherwise = checkUsuarioPublicacion ps user
 
 -- Dada una red social y dos usuarios, indica si existe una secuencia de usuarios relacionados para llegar del primero al segundo.
 existeSecuenciaDeAmigos :: RedSocial -> Usuario -> Usuario -> Bool
