@@ -1,8 +1,11 @@
+import Ejemplos
+
 type Set a = [a]
 type Usuario = (Integer, String) -- (id, nombre)
 type Relacion = (Usuario, Usuario) -- usuarios que se relacionan
 type Publicacion = (Usuario, String, Set Usuario) -- (usuario que publica, texto publicacion, likes)
 type RedSocial = (Set Usuario, Set Relacion, Set Publicacion)
+
 
 
 lista_usuarios :: Set Usuario
@@ -129,8 +132,14 @@ checkUsuarioPublicacion (p:ps) user | matchPublicacionUsuario p user == True = 1
                                     | otherwise = checkUsuarioPublicacion ps user
 
 -- Dada una red social y dos usuarios, indica si existe una secuencia de usuarios relacionados para llegar del primero al segundo.
-existeSecuenciaDeAmigos :: RedSocial -> Usuario -> Usuario -> Bool
-existeSecuenciaDeAmigos = undefined
+--existeSecuenciaDeAmigos :: RedSocial -> Usuario -> Usuario -> Bool
+--existeSecuenciaDeAmigos (us,(r:rs),ps) user1 user2 | buscarUsuarioEnRelacion (relacionesDe user1) user2 = Fasle
+--                                                   | buscarUsuarioEnRelacion (relacionesDe user1) user2 == False && buscarUsuarioEnRelacion (relacionesDe user2) user1 == True = True
+
+--buscarUsuarioEnRelacion :: Set Relacion -> Usuario -> Bool
+--buscarUsuarioEnRelacion [] u = False
+--buscarUsuarioEnRelacion (user1,user2:rs) u | user2 == u = True
+--                                           | otherwise = buscarUsuarioEnRelacion rs u
 
 -- Dada una lista de cierto tipo retorna un conjunto del mismo tipo
 elimRepetidos :: Eq a => [a] -> Set a
