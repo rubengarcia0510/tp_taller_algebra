@@ -54,9 +54,9 @@ type Complejo = (Float, Float)
 sumaComplejos :: Complejo -> Complejo -> Complejo
 sumaComplejos (a,b) (d,c) = (a+d,b+c)
 
-productoComplejos :: Complejo -> Complejo -> Complejo
-productoComplejos (a,b) (c,d) = (a*c - b*d,a*d + b*c)
+--productoComplejos :: Complejo -> Complejo -> Complejo
+--productoComplejos (a,b) (c,d) = (a*c - b*d,a*d + b*c)
 
-potenciaComplejos :: Complejo -> Integer -> Complejo
-potenciaComplejos 0 _ = (1,0)
-potenciaComplejos n z = productoComplejos z potenciaComplejos (n-1) z
+--potenciaComplejos :: Complejo -> Integer -> Complejo
+--potenciaComplejos 0 _ = (1,0)
+--potenciaComplejos n z = productoComplejos z potenciaComplejos (n-1) z
