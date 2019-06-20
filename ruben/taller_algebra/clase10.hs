@@ -3,7 +3,6 @@ where
 
 type Polinomio = [Float]
 
-
 grado :: Polinomio -> Integer
 grado [p] = 0
 grado (p:ps) = 1 + grado ps
