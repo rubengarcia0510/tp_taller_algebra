@@ -1,6 +1,7 @@
 module Clase10
 where
 
+
 type Polinomio = [Float]
 
 
