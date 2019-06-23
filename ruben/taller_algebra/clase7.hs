@@ -50,3 +50,8 @@ ultimoElemento :: [Integer] -> Integer
 ultimoElemento [] = 0
 ultimoElemento l | length (tail l) == 0 = head l
                  | otherwise = ultimoElemento (tail l)
+
+pares :: [Integer] -> [Integer]
+pares [] = []
+pares (l:ls) | mod l 2 == 0 = (l:pares ls)
+             | otherwise = pares ls
