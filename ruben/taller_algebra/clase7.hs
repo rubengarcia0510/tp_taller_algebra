@@ -60,3 +60,8 @@ multiplosDeN :: Integer -> [Integer] -> [Integer]
 multiplosDeN _ [] = []
 multiplosDeN n (l:ls) | l >= n && mod l n == 0 = (l:multiplosDeN n ls)
                       | otherwise = multiplosDeN n ls
+
+quitar :: Integer -> [Integer] -> [Integer]
+quitar _ [] = []
+quitar n (l:ls) | n == l = ls
+                | otherwise = (l:quitar n ls)
