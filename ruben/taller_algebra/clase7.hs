@@ -76,3 +76,10 @@ eliminarRepetidos :: [Integer] -> [Integer]
 eliminarRepetidos [] = []
 eliminarRepetidos (l:ls) | elem l ls == True = eliminarRepetidos ls
                          | otherwise = (l:eliminarRepetidos ls)
+
+maximo :: [Integer] -> Integer
+maximo [n] = n
+maximo (l:ls) | l > head ls = maximo (l:(quitar (head ls) ls))
+              | otherwise = maximo ls
+
+ordenar :: [Integer] -> [Integer]
