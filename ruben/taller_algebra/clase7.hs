@@ -70,3 +70,9 @@ hayRepetidos :: [Integer] -> Bool
 hayRepetidos [] = False
 hayRepetidos (l:ls) | elem l ls == True = True
                     | otherwise = hayRepetidos ls
+
+
+eliminarRepetidos :: [Integer] -> [Integer]
+eliminarRepetidos [] = []
+eliminarRepetidos (l:ls) | elem l ls == True = eliminarRepetidos ls
+                         | otherwise = (l:eliminarRepetidos ls)
