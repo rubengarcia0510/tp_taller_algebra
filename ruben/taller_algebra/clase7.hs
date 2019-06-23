@@ -14,26 +14,35 @@ primerMultiplode45345 :: [Integer] -> Integer
 primerMultiplode45345 (l:ls) | l > 45345 && mod l 45345 == 0 = l
                              | otherwise = primerMultiplode45345 ls
 
-pertenece :: Integer -> [Integer] -> Bool
-pertenece e [] = False
-pertenece e l = e == head l || pertenece e (tail l)
-
---productoria :: [Integer] -> Integer
---productoria [] = 1
---productoria l | l /= [] = (head l) * productoria (tail l)
+perteneceR :: Integer -> [Integer] -> Bool
+perteneceR e [] = False
+perteneceR e l = e == head l || perteneceR e (tail l)
 
 productoria :: [Integer] -> Integer
 productoria [] = 1
-productoria (l:ls) = l * (productoria ls)
+productoria l | l /= [] = (head l) * productoria (tail l)
 
---sumarN :: Integer -> [Integer] -> [Integer]
---sumarN n [] = [n]
---sumarN n l | l /= [] = ((head l)+n:sumarN n (tail l))
+productoriaR :: [Integer] -> Integer
+productoriaR [] = 1
+productoriaR (l:ls) = l * (productoriaR ls)
 
 sumarN :: Integer -> [Integer] -> [Integer]
 sumarN n [] = [n]
-sumarN n (l:ls) = (l+n:sumarN n ls)
+sumarN n l | l /= [] = ((head l)+n:sumarN n (tail l))
+
+sumarNR :: Integer -> [Integer] -> [Integer]
+sumarNR n [] = [n]
+sumarNR n (l:ls) = (l+n:sumarNR n ls)
 
 sumarElPrimero :: [Integer] -> [Integer]
 sumarElPrimero [] = []
-sumarElPrimero l | l /= [] = ((head l) +1:sumarElPrimero (tail l))
+sumarElPrimero l = sumarXaLista (head l) l
+
+
+sumarXaLista :: Integer -> [Integer] -> [Integer]
+sumarXaLista n [] = [n]
+sumarXaLista n (x:xs) | (x:xs) /= [] = (n+x:sumarXaLista n xs)
+
+sumarElPrimeroR :: [Integer] -> [Integer]
+sumarElPrimeroR [] = []
+sumarElPrimeroR (l:ls) = (l+1:sumarElPrimeroR ls)
