@@ -25,3 +25,15 @@ pertenece e l = e == head l || pertenece e (tail l)
 productoria :: [Integer] -> Integer
 productoria [] = 1
 productoria (l:ls) = l * (productoria ls)
+
+--sumarN :: Integer -> [Integer] -> [Integer]
+--sumarN n [] = [n]
+--sumarN n l | l /= [] = ((head l)+n:sumarN n (tail l))
+
+sumarN :: Integer -> [Integer] -> [Integer]
+sumarN n [] = [n]
+sumarN n (l:ls) = (l+n:sumarN n ls)
+
+sumarElPrimero :: [Integer] -> [Integer]
+sumarElPrimero [] = []
+sumarElPrimero l | l /= [] = (head l)
