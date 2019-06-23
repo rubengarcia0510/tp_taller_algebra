@@ -36,4 +36,4 @@ sumarN n (l:ls) = (l+n:sumarN n ls)
 
 sumarElPrimero :: [Integer] -> [Integer]
 sumarElPrimero [] = []
-sumarElPrimero l | l /= [] = (head l)
+sumarElPrimero l | l /= [] = ((head l) +1:sumarElPrimero (tail l))
