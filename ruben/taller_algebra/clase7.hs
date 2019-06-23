@@ -55,3 +55,8 @@ pares :: [Integer] -> [Integer]
 pares [] = []
 pares (l:ls) | mod l 2 == 0 = (l:pares ls)
              | otherwise = pares ls
+
+multiplosDeN :: Integer -> [Integer] -> [Integer]
+multiplosDeN _ [] = []
+multiplosDeN n (l:ls) | l >= n && mod l n == 0 = (l:multiplosDeN n ls)
+                      | otherwise = multiplosDeN n ls
