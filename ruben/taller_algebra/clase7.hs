@@ -65,3 +65,8 @@ quitar :: Integer -> [Integer] -> [Integer]
 quitar _ [] = []
 quitar n (l:ls) | n == l = ls
                 | otherwise = (l:quitar n ls)
+
+hayRepetidos :: [Integer] -> Bool
+hayRepetidos [] = False
+hayRepetidos (l:ls) | elem l ls == True = True
+                    | otherwise = hayRepetidos ls
