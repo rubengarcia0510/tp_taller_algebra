@@ -38,11 +38,15 @@ sumarElPrimero :: [Integer] -> [Integer]
 sumarElPrimero [] = []
 sumarElPrimero l = sumarXaLista (head l) l
 
-
 sumarXaLista :: Integer -> [Integer] -> [Integer]
 sumarXaLista n [] = [n]
 sumarXaLista n (x:xs) | (x:xs) /= [] = (n+x:sumarXaLista n xs)
 
-sumarElPrimeroR :: [Integer] -> [Integer]
-sumarElPrimeroR [] = []
-sumarElPrimeroR (l:ls) = (l+1:sumarElPrimeroR ls)
+sumarElUltimo :: [Integer] -> [Integer]
+sumarElUltimo [] = []
+sumarElUltimo l = ((head l) + (ultimoElemento l):sumarElUltimo (tail l))
+
+ultimoElemento :: [Integer] -> Integer
+ultimoElemento [] = 0
+ultimoElemento l | length (tail l) == 0 = head l
+                 | otherwise = ultimoElemento (tail l)
