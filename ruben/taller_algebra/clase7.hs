@@ -84,5 +84,10 @@ maximo (l:ls) | l > head ls = maximo (l:(quitar (head ls) ls))
 
 ordenar :: [Integer] -> [Integer]
 ordenar [n] = [n]
-ordenar (l:ls) | l > head ls = ordenar (l:(head ls:tail ls))
-               | otherwise = ordenar (head ls:ordenar (l:tail ls))
+ordenar (l:ls) | l < head ls = (l:ordenar ls)
+               | otherwise = ordenar (head ls:(tail ls)++[l])
+
+reverso :: [Integer] -> [Integer]
+reverso [n] = [n]
+reverso (l:ls) | l > head ls = (l:reverso ls)
+               | otherwise = reverso (head ls:(tail ls)++[l])
